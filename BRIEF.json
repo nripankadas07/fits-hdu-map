@@ -1,0 +1,29 @@
+{
+  "repo": "fits-hdu-map",
+  "units": 10,
+  "capability": "Map FITS primary/IMAGE header, data and padding byte ranges without loading arrays.",
+  "user": "Astronomy archive ingestion maintainers.",
+  "pain": "A rejected small FITS needs physical HDU boundaries and padding evidence before array interpretation.",
+  "comparables": [
+    "astropy/astropy",
+    "ATTron/astroz",
+    "esheldon/fitsio",
+    "heasarc/cfitsio"
+  ],
+  "leader": "astropy/astropy",
+  "query": "FITS astronomy; Astropy",
+  "contract": "80-byte printable ASCII cards, complete 2880-byte blocks, ordered primary SIMPLE/BITPIX/NAXIS and consecutive NAXISn, IMAGE extensions with EXTEND=T and PCOUNT=0/GCOUNT=1. Dimensions0..4, axis sizes0..1000000, BITPIX8/16/32/64/-32/-64. END and space header padding are required. Nonzero data padding is an exit1 finding. Byte ranges use exclusive ends; no arrays are allocated.",
+  "limits": "8 MiB,32 HDUs,144 cards per header. No tables, random groups, compressed extensions, pixel interpretation, scaling, WCS, repair or complete FITS conformance validation. CHECKSUM/DATASUM are explicitly unverified. Nonstructural card values are not semantically validated.",
+  "acceptance": "Correct two-HDU layout, zero dimensions, float64 data extent, quoted slash handling, malformed card order/duplicates, truncation and nonzero padding.",
+  "notes": "Astropy and CFITSIO already provide much broader FITS IO and verification; fitsio exposes CFITSIO-backed table/image access. Astroz is a terminal astronomy workflow. No missing HDU-inspection capability is claimed. The precise ranges and strict subset are our interface choice.",
+  "overlap": "No FITS HDU mapper was found among all198 owned repositories. Existing media inspectors do not implement astronomical block/card semantics.",
+  "topics": [
+    "fits",
+    "astronomy",
+    "python",
+    "data-validation"
+  ],
+  "standard": "https://fits.gsfc.nasa.gov/fits_standard.html",
+  "expected": "Exit0: primary data is empty at byte2880; IMAGE data occupies bytes5760..5764 and padding ends at8640.",
+  "module": "fits_hdu_map"
+}
