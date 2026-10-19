@@ -1,0 +1,3 @@
+# Verifier repair —19 October2026
+
+Initial CI at0f42359ec34195b5e831a6b7a080530f4d0f0f64 failed in installed-console validation. Run39211357905/job117925254015 showed FileNotFoundError under the hosted Python directory. The verifier resolved the virtual-environment Python symlink before locating its sibling console command, losing the virtual environment. Use an absolute path without resolving that symlink. All five preparations were rerun with symlinks=True, matching the CI environment. Behavior tests, compilation, wheel and installed success/failure checks passed. The current remote CI must still pass before merge. No checks were disabled.

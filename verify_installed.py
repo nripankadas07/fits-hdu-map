@@ -1,7 +1,7 @@
 import hashlib,json,pathlib,subprocess,sys,tempfile
 ROOT=pathlib.Path(__file__).resolve().parent
 REPO=ROOT.name
-PY=pathlib.Path(sys.argv[1]).resolve()
+PY=pathlib.Path(sys.argv[1]).absolute()
 CMD=PY.parent/REPO
 
 def check(args,expected,cwd):
