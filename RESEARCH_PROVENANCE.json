@@ -1,0 +1,319 @@
+{
+  "comparables": [
+    {
+      "full": "astropy/astropy",
+      "url": "https://github.com/astropy/astropy",
+      "stars": 5350,
+      "pushed_at": "2026-10-18T21:02:13Z",
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "branch": "main",
+      "observed": "2026-10-19T06:23:16.613Z",
+      "issues": [
+        {
+          "number": 20639,
+          "url": "https://github.com/astropy/astropy/issues/20639",
+          "title": "read_table_parquet raises KeyError when a column is absent from the stored astropy table_meta_yaml"
+        },
+        {
+          "number": 20638,
+          "url": "https://github.com/astropy/astropy/pull/20638",
+          "title": "Backport PR #20464 on branch v7.2.x (BUG: fix fast ASCII reader corrupting comments found after the header line)"
+        },
+        {
+          "number": 20637,
+          "url": "https://github.com/astropy/astropy/pull/20637",
+          "title": "Backport PR #20464 on branch v8.0.x (BUG: fix fast ASCII reader corrupting comments found after the header line)"
+        },
+        {
+          "number": 20636,
+          "url": "https://github.com/astropy/astropy/pull/20636",
+          "title": "Deprecate leap-second sources other than the ERFA table"
+        },
+        {
+          "number": 20632,
+          "url": "https://github.com/astropy/astropy/issues/20632",
+          "title": "Astropy rejects leap-second tables that do not expire"
+        }
+      ]
+    },
+    {
+      "full": "ATTron/astroz",
+      "url": "https://github.com/ATTron/astroz",
+      "stars": 276,
+      "pushed_at": "2026-10-16T18:39:23Z",
+      "archived": false,
+      "license": "MIT",
+      "branch": "main",
+      "observed": "2026-10-19T06:23:16.615Z",
+      "issues": [
+        {
+          "number": 109,
+          "url": "https://github.com/ATTron/astroz/pull/109",
+          "title": "rabbit-hole: wasm+npm"
+        },
+        {
+          "number": 88,
+          "url": "https://github.com/ATTron/astroz/pull/88",
+          "title": "feat: uslp ccsds standard"
+        },
+        {
+          "number": 73,
+          "url": "https://github.com/ATTron/astroz/issues/73",
+          "title": "Can't install / build on windows"
+        }
+      ]
+    },
+    {
+      "full": "esheldon/fitsio",
+      "url": "https://github.com/esheldon/fitsio",
+      "stars": 150,
+      "pushed_at": "2026-10-17T17:24:30Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "branch": "master",
+      "observed": "2026-10-19T06:23:16.382Z",
+      "issues": [
+        {
+          "number": 523,
+          "url": "https://github.com/esheldon/fitsio/pull/523",
+          "title": "feat: add support for rsfitsio as backend"
+        },
+        {
+          "number": 522,
+          "url": "https://github.com/esheldon/fitsio/issues/522",
+          "title": "drop support for compiling against external libraries"
+        },
+        {
+          "number": 468,
+          "url": "https://github.com/esheldon/fitsio/issues/468",
+          "title": "fitsio 2 planning & ideas"
+        },
+        {
+          "number": 435,
+          "url": "https://github.com/esheldon/fitsio/pull/435",
+          "title": "Fix potential free of null pointer in stringlist_delete"
+        },
+        {
+          "number": 433,
+          "url": "https://github.com/esheldon/fitsio/issues/433",
+          "title": "Perform null check before free"
+        }
+      ]
+    },
+    {
+      "full": "heasarc/cfitsio",
+      "url": "https://github.com/heasarc/cfitsio",
+      "stars": 71,
+      "pushed_at": "2026-10-06T02:09:09Z",
+      "archived": false,
+      "license": "UNCLASSIFIED",
+      "branch": "develop",
+      "observed": "2026-10-19T06:23:16.357Z",
+      "issues": [
+        {
+          "number": 192,
+          "url": "https://github.com/heasarc/cfitsio/pull/192",
+          "title": "Fix 2^63/2^64 edge in integer keyword readers"
+        },
+        {
+          "number": 191,
+          "url": "https://github.com/heasarc/cfitsio/pull/191",
+          "title": "Fix 2^63 edge in double/float to LONGLONG conversions"
+        },
+        {
+          "number": 190,
+          "url": "https://github.com/heasarc/cfitsio/pull/190",
+          "title": "Fix variable-length bit columns in tile-compressed tables"
+        },
+        {
+          "number": 189,
+          "url": "https://github.com/heasarc/cfitsio/pull/189",
+          "title": "Reject repeated '.' and honour D exponents in expression real constants"
+        },
+        {
+          "number": 188,
+          "url": "https://github.com/heasarc/cfitsio/pull/188",
+          "title": "Fix fffi2u8 signed bounds and 2^64 edge in ULONGLONG read converters"
+        }
+      ]
+    }
+  ],
+  "readmes": [
+    {
+      "repo": "astropy/astropy",
+      "path": "README.rst",
+      "sha": "48f27ec0d4640dbd96ab0a5334361cc3879971b6"
+    },
+    {
+      "repo": "esheldon/fitsio",
+      "path": "README.md",
+      "sha": "e5f3998349a846da6af1572164fe3895675602c9"
+    },
+    {
+      "repo": "heasarc/cfitsio",
+      "path": "README.md",
+      "sha": "31ae7e5e4dc593b9563369d7accd9c8da9bec261"
+    },
+    {
+      "repo": "ATTron/astroz",
+      "path": "README.md",
+      "sha": "591a6c191fae4dd0a09ee95f1a800ff09b46a754"
+    }
+  ],
+  "source_references": [
+    {
+      "repo": "astropy/astropy",
+      "path": "astropy/io/fits/hdu/base.py",
+      "sha": "1d1dc87bad19711a973d83644a9920771bc3c1f8",
+      "observed": "2026-10-19T06:24:10.492Z"
+    }
+  ],
+  "queries": [
+    {
+      "query": "FITS astronomy",
+      "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:20:32.368Z",
+      "sort": "Most stars",
+      "results": [
+        "ATTron/astroz",
+        "sherpa/sherpa",
+        "esheldon/fitsio",
+        "TheCyberBrick/FITS-Rating-Tool",
+        "danieljprice/splash",
+        "Hrishikesh332/Astronomy_Analysis",
+        "nom-tam-fits/nom-tam-fits",
+        "onekiloparsec/QLFits",
+        "astroclubiitk/Computational-Astrophysics-2021",
+        "JuliaAstro/FITSIO.jl"
+      ]
+    },
+    {
+      "query": "ELF parser",
+      "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:20:33.523Z",
+      "sort": "Most stars",
+      "results": [
+        "lief-project/LIEF",
+        "eliben/pyelftools",
+        "m4b/goblin",
+        "elfmaster/libelfmaster",
+        "zszszszsz/.config",
+        "aclements/libelfin",
+        "cole14/rust-elf",
+        "finixbit/elf-parser",
+        "aep/elfkit",
+        "fornwall/jelf"
+      ]
+    },
+    {
+      "query": "TIFF image",
+      "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:20:34.587Z",
+      "sort": "Most stars",
+      "results": [
+        "lovell/sharp",
+        "libvips/libvips",
+        "SixLabors/ImageSharp",
+        "Lymphatus/caesium-image-compressor",
+        "sylikc/jpegview",
+        "drewnoakes/metadata-extractor",
+        "JimBobSquarePants/ImageProcessor",
+        "woelper/oculante",
+        "davidbyttow/govips",
+        "Tom94/tev"
+      ]
+    },
+    {
+      "query": "bin packing",
+      "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:20:35.685Z",
+      "sort": "Most stars",
+      "results": [
+        "cfig/Android_boot_image_editor",
+        "alexfrom0815/Online-3D-BPP-PCT",
+        "juj/RectangleBinPack",
+        "alexfrom0815/Online-3D-BPP-DRL",
+        "jakesgordon/bin-packing",
+        "dvdoug/BoxPacker",
+        "skjolber/3d-bin-container-packing",
+        "enzoruiz/3dbinpacking",
+        "jerry800416/3D-bin-packing",
+        "Flamethr0wer/polygon-packer"
+      ]
+    },
+    {
+      "query": "DRAT proof",
+      "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:20:36.716Z",
+      "sort": "Most stars",
+      "results": [
+        "marijnheule/drat-trim",
+        "digama0/frat",
+        "krobelus/rate",
+        "jesse-michael-han/neurocuber-public",
+        "marijnheule/pr2drat",
+        "jingchaochen/abcdSAT_Rat",
+        "benjaminkiesl/drat2er",
+        "cmu-transparency/verified_rup",
+        "prateekkumarweb/sat-verifier",
+        "jjasferreira/maxsat-core-bench"
+      ]
+    },
+    {
+      "query": "cutting stock",
+      "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:22:22.814Z",
+      "sort": "Most stars",
+      "results": [
+        "danderfer/Comp_Sci_Sem_2",
+        "bozokopic/opcut",
+        "emadehsan/csp",
+        "kaiT2en/KaiT2en-Fedora",
+        "fabiofdsantos/2d-cutting-stock-problem",
+        "shivamim/Finance_AgenticAI",
+        "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+        "AlexanderMorozovDesign/Linear_Cutting",
+        "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+        "ccorcos/stock-cutting"
+      ]
+    },
+    {
+      "query": "Astropy",
+      "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:22:24.018Z",
+      "sort": "Most stars",
+      "results": [
+        "astropy/astropy",
+        "sunpy/sunpy",
+        "astropy/astroquery",
+        "asdf-format/asdf",
+        "astropy-learn/astropy-tutorials",
+        "astropy/photutils",
+        "gammapy/gammapy",
+        "astropy/specutils",
+        "astropy/astropy-workshop",
+        "astropy/ccd-reduction-and-photometry-guide"
+      ]
+    },
+    {
+      "query": "DRUP",
+      "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-19T06:22:25.128Z",
+      "sort": "Most stars",
+      "results": [
+        "drupal/drupal",
+        "drupal-composer/drupal-project",
+        "fossasia/phimpme-drupal",
+        "geerlingguy/drupal-vm",
+        "wodby/docker4drupal",
+        "hechoendrupal/drupal-console",
+        "perusio/drupal-with-nginx",
+        "chapter-three/next-drupal",
+        "immunIT/drupwn",
+        "dreadlocked/Drupalgeddon2"
+      ]
+    }
+  ],
+  "primary_reference": "https://fits.gsfc.nasa.gov/fits_standard.html"
+}
