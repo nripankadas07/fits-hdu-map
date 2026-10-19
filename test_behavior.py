@@ -2,7 +2,7 @@ import unittest
 from fits_hdu_map import inspect,example,value
 
 def change(b,index,key,val,base=0):
- b=bytearray(b);b[base+index*80:base+(index+1)*80]=(key.ljust(8)+'= '+val).ljust(80).encode();return bytes(b)
+ b=bytearray(b);b[base+index*80:base+(index+1)*80]=(key.ljust(8)+'= '+(val if val.startswith("'") else val.rjust(20))).ljust(80).encode();return bytes(b)
 class Behavior(unittest.TestCase):
  def test_primary_and_extension(self):
   r=inspect(example());self.assertEqual([x['data_range'] for x in r['hdus']],[[2880,2880],[5760,5764]]);self.assertEqual(r['findings'],[])
@@ -27,3 +27,9 @@ class Behavior(unittest.TestCase):
  def test_axis_boundary(self):
   with self.assertRaises(ValueError):inspect(change(example(),3,'NAXIS1','1000001',2880))
  def test_quoted_slash(self):self.assertEqual(value("KEY     = 'a/b''c' / comment"),"a/b'c")
+
+ def test_required_fixed_columns(self):
+  raw=example();self.assertEqual(raw[10:30],b'                   T');self.assertEqual(raw[90:110],b'                   8')
+  for index,key,v in ((0,'SIMPLE','T'),(1,'BITPIX','8')):
+   b=bytearray(raw);b[index*80:(index+1)*80]=(key.ljust(8)+'= '+v).ljust(80).encode()
+   with self.assertRaisesRegex(ValueError,'column 30'):inspect(b)

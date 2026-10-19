@@ -45,7 +45,13 @@ def inspect(raw):
                 if key in values:raise ValueError('duplicate structural keyword')
                 if (key=='XTENSION') != c[10:].lstrip().startswith("'"):
                     raise ValueError('incorrect structural value type')
-                values[key]=value(c)
+                parsed=value(c)
+                if key=='XTENSION':
+                    if c[10:20]!="'IMAGE   '" or (c[20:].strip() and not c[20:].lstrip().startswith('/')):
+                        raise ValueError('IMAGE extension requires fixed-format string')
+                elif c[10:30]!=parsed.rjust(20) or not parsed or len(parsed)>20:
+                    raise ValueError('structural value must be right justified through column 30')
+                values[key]=parsed
         if end is None:raise ValueError('END absent within four header blocks')
         data_start=((end+2879)//2880)*2880
         if data_start>len(raw) or any(b!=32 for b in raw[end:data_start]):raise ValueError('header padding must be spaces')
@@ -85,7 +91,7 @@ def inspect(raw):
 
 
 def example():
-    def card(k,v):return (k.ljust(8)+'= '+v).ljust(80).encode('ascii')
+    def card(k,v):return (k.ljust(8)+'= '+(v if v.startswith("'") else v.rjust(20))).ljust(80).encode('ascii')
     def header(cards):
         b=b''.join(card(k,v) for k,v in cards)+b'END'.ljust(80)
         return b.ljust((len(b)+2879)//2880*2880,b' ')

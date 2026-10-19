@@ -23,7 +23,7 @@ Example generators create only an explicitly named new file and refuse overwrite
 
 ## Contract
 
-80-byte printable ASCII cards, complete 2880-byte blocks, ordered primary SIMPLE/BITPIX/NAXIS and consecutive NAXISn, IMAGE extensions with EXTEND=T and PCOUNT=0/GCOUNT=1. Dimensions0..4, axis sizes0..1000000, BITPIX8/16/32/64/-32/-64. END and space header padding are required. Nonzero data padding is an exit1 finding. Byte ranges use exclusive ends; no arrays are allocated.
+80-byte printable ASCII cards with fixed-format structural values (logical/integer values right justified through column30; IMAGE string starts at column11), complete 2880-byte blocks, ordered primary SIMPLE/BITPIX/NAXIS and consecutive NAXISn, IMAGE extensions with EXTEND=T and PCOUNT=0/GCOUNT=1. Dimensions0..4, axis sizes0..1000000, BITPIX8/16/32/64/-32/-64. END and space header padding are required. Nonzero data padding is an exit1 finding. Byte ranges use exclusive ends; no arrays are allocated.
 
 JSON reports go to stdout. Exit0 means the documented successful result, exit1 a valid finding/incomplete/rejected result, exit2 invalid/unsupported input, I/O or budget failure with stderr and no partial report. Ranges are half-open.
 
